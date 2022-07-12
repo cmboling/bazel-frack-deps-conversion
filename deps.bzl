@@ -23,9 +23,6 @@ def manual_go_deps():
         importpath = "github.com/google/go-containerregistry",
         commit = "628a2ff5f006eca399a316a66cc714106fcb3943",
         build_directives = [
-            # the k8schain package is not used.  Gazelle and go modules are
-            # confused by it:
-            # https://github.com/vdemeester/k8s-pkg-credentialprovider#k8siokubernetespkgcredentialprovider-temporary-fork
             "gazelle:exclude pkg/authn/k8schain/**/*",
         ],
     )
